@@ -1,0 +1,35 @@
+
+# Environment - không đưa mật khẩu lên GitHub
+.env
+.env.*
+!.env.example
+
+# Thư viện PHP
+/vendor/
+
+# Thư viện JavaScript
+/node_modules/
+
+# File build frontend
+/public/build/
+/public/hot
+
+# File log
+*.log
+
+# Cache và kết quả kiểm thử
+.phpunit.cache
+.phpunit.result.cache
+
+# File cấu hình cá nhân
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
+
+# File cấu hình máy ảo
+Homestead.yaml
+Homestead.json
+
+# File sinh ra khi chạy Laravel
+/storage/*.key
