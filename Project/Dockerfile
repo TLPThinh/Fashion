@@ -5,9 +5,12 @@ WORKDIR /var/www/html
 
 COPY . .
 
-ENV COMPOSER_ALLOW_SUPERUSER=1
+RUN apk add --no-cache nodejs npm
 
+ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN composer install --no-dev --optimize-autoloader --no-interaction
+
+RUN npm ci && npm run build
 
 ENV NGINX_FASTCGI_PASS=127.0.0.1:9000
 ENV WEBROOT=/var/www/html/public
