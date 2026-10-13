@@ -9,6 +9,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
+ENV NGINX_FASTCGI_PASS=127.0.0.1:9000
 ENV WEBROOT=/var/www/html/public
 ENV SKIP_COMPOSER=1
 ENV PHP_ERRORS_STDERR=1
