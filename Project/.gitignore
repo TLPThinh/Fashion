@@ -10,8 +10,8 @@
 # Thư viện JavaScript
 /node_modules/
 
-# File build frontend
-/public/build/
+# File build frontend (đã bỏ /public/build/ để deploy lên Render)
+# /public/build/
 /public/hot
 
 # File log
